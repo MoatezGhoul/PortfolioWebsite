@@ -1,0 +1,66 @@
+$bg: #0f1115;
+$surface: #181b22;
+$text: #e8e9ed;
+$muted: #9aa0ad;
+$accent: #6ea8fe;
+$radius: 12px;
+
+body {
+  background: $bg;
+  color: $text;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+a { color: inherit; text-decoration: none; }
+
+main, .navbar, .footer { max-width: 1000px; margin: 0 auto; padding: 0 1.25rem; }
+
+.navbar {
+  display: flex; justify-content: space-between; align-items: center;
+  padding-top: 1.25rem; padding-bottom: 1.25rem;
+  position: sticky; top: 0; background: rgba($bg, 0.85); backdrop-filter: blur(8px);
+  .logo { font-weight: 700; }
+  nav a { margin-left: 1.25rem; color: $muted; &:hover { color: $accent; } }
+}
+
+.hero {
+  padding: 7rem 0 5rem;
+  .eyebrow { color: $accent; margin: 0; }
+  h1 { font-size: clamp(2.5rem, 7vw, 4.5rem); margin: 0.25rem 0; }
+  h2 { font-size: clamp(1.25rem, 3vw, 1.75rem); color: $muted; margin: 0; font-weight: 500; }
+  .tagline { max-width: 520px; margin: 1.25rem 0 2rem; color: $muted; }
+}
+
+.buttons { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+.btn {
+  padding: 0.7rem 1.25rem; border-radius: $radius; border: 1px solid #2a2f3a;
+  transition: 0.2s;
+  &:hover { border-color: $accent; color: $accent; }
+  &.primary { background: $accent; color: #0b0d11; border-color: $accent; font-weight: 600;
+    &:hover { opacity: 0.9; color: #0b0d11; } }
+}
+
+.section {
+  padding: 4rem 0;
+  h2 { font-size: 1.75rem; margin-bottom: 1rem; }
+  p { color: $muted; max-width: 650px; }
+}
+
+.chips {
+  display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; padding: 0; margin: 1.25rem 0 0;
+  li { background: $surface; padding: 0.35rem 0.85rem; border-radius: 999px; font-size: 0.9rem; }
+  &.small li { font-size: 0.78rem; padding: 0.2rem 0.65rem; color: $accent; }
+}
+
+.grid { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+.card {
+  background: $surface; border-radius: $radius; padding: 1.25rem; transition: transform 0.2s;
+  &:hover { transform: translateY(-4px); }
+  img { width: 100%; border-radius: 8px; margin-bottom: 0.75rem; }
+  h3 { margin: 0 0 0.4rem; }
+  p { margin: 0; font-size: 0.95rem; }
+  .links { margin-top: 1rem; display: flex; gap: 1rem; a { color: $accent; } }
+}
+
+.footer { text-align: center; padding: 2rem 0; color: $muted; font-size: 0.85rem; }

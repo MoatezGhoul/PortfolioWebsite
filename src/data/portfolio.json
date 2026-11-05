@@ -1,0 +1,22 @@
+{
+  "portfolio": [
+    {
+      "cover": "/portfolio/project1.png",
+      "title": "Project One",
+      "description": "ReactJS, Node.js, MongoDB",
+      "url": "https://github.com/yourusername/project-one"
+    },
+    {
+      "cover": "/portfolio/project2.png",
+      "title": "Project Two",
+      "description": "Python, Flask, SQLite",
+      "url": "https://github.com/yourusername/project-two"
+    },
+    {
+      "cover": "/portfolio/project3.png",
+      "title": "Project Three",
+      "description": "HTML, CSS, JavaScript",
+      "url": "https://project-three.pages.dev"
+    }
+  ]
+}
